@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="650.0" prefWidth="950.0" styleClass="Content" stylesheets="@design.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="PFC.View.MainViewController">
+   <children>
+      <Label layoutX="14.0" layoutY="14.0" prefHeight="34.0" prefWidth="217.0" text="Tableau de Bord" textFill="WHITE" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="14.0">
+         <effect>
+            <Glow />
+         </effect>
+         <font>
+            <Font name="Cambria Bold" size="27.0" />
+         </font>
+      </Label>
+      <Separator layoutX="14.0" layoutY="55.0" prefHeight="0.0" prefWidth="586.0" style="-fx-background-color: white;" AnchorPane.leftAnchor="7.0" AnchorPane.rightAnchor="7.0" />
+      <GridPane layoutX="23.0" layoutY="79.0" prefHeight="494.0" prefWidth="950.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <children>
+            <Label text="Gestion des ressources " textFill="WHITE" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+               <font>
+                  <Font name="Cambria Bold Italic" size="20.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets left="14.0" />
+               </GridPane.margin>
+            </Label>
+            <Label text="Gestion des plannings" textFill="WHITE" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+               <font>
+                  <Font name="Cambria Bold Italic" size="20.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets left="14.0" />
+               </GridPane.margin>
+            </Label>
+            <HBox alignment="CENTER" prefHeight="83.0" prefWidth="753.0" spacing="8.0" GridPane.rowIndex="2">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#geButtonHandler" prefHeight="38.0" prefWidth="148.0" text="Gestion des enseignants">
+                     <font>
+                        <Font name="Cambria" size="12.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="18.0" layoutY="33.0" mnemonicParsing="false" onAction="#glButtonHandler" prefHeight="38.0" prefWidth="148.0" text="Gestion des locaux">
+                     <font>
+                        <Font name="Cambria" size="12.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="174.0" layoutY="33.0" mnemonicParsing="false" onAction="#gpButtonHandler" prefHeight="38.0" prefWidth="148.0" text="Gestion des promotions">
+                     <font>
+                        <Font name="Cambria" size="12.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="330.0" layoutY="33.0" mnemonicParsing="false" onAction="#gcButtonHandler" prefHeight="38.0" prefWidth="148.0" text="Gestion des creneaux">
+                     <font>
+                        <Font name="Cambria" size="12.0" />
+                     </font>
+                  </Button>
+               </children>
+               <GridPane.margin>
+                  <Insets />
+               </GridPane.margin>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="8.0" GridPane.rowIndex="5">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#gplCreateButtonHandler" prefHeight="38.0" prefWidth="148.0" text="Créer un planning">
+                     <font>
+                        <Font name="Cambria" size="12.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="editButton" layoutX="18.0" layoutY="32.0" mnemonicParsing="false" onAction="#gplEditButtonHandler" prefHeight="38.0" prefWidth="148.0" text="Modifier un planning">
+                     <font>
+                        <Font name="Cambria" size="12.0" />
+                     </font>
+                  </Button>
+               </children>
+               <GridPane.margin>
+                  <Insets />
+               </GridPane.margin>
+            </HBox>
+            <ImageView fitHeight="85.0" fitWidth="156.0" pickOnBounds="true" preserveRatio="true" GridPane.halignment="CENTER" GridPane.rowIndex="4">
+               <image>
+                  <Image url="@pl.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="85.0" fitWidth="156.0" pickOnBounds="true" preserveRatio="true" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+               <image>
+                  <Image url="@res.png" />
+               </image>
+            </ImageView>
+         </children>
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="650.0" prefWidth="100.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints maxHeight="89.0" minHeight="10.0" prefHeight="46.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="179.0" minHeight="10.0" prefHeight="46.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="179.0" minHeight="10.0" prefHeight="80.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="201.0" minHeight="10.0" prefHeight="46.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="201.0" minHeight="10.0" prefHeight="46.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="201.0" minHeight="10.0" prefHeight="80.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+      </GridPane>
+   </children>
+</AnchorPane>

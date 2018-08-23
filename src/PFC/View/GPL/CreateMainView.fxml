@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" onKeyPressed="#keysHandler" prefHeight="600.0" prefWidth="900.0" styleClass="Content" stylesheets="@../design.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="PFC.View.GPL.CreateMainViewController">
+   <children>
+      <Label layoutX="14.0" layoutY="14.0" prefHeight="34.0" prefWidth="258.0" text="Créer un planning" textFill="WHITE" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="14.0">
+         <effect>
+            <Glow />
+         </effect>
+         <font>
+            <Font name="Cambria Bold" size="27.0" />
+         </font>
+      </Label>
+      <Separator layoutX="14.0" layoutY="55.0" prefHeight="0.0" prefWidth="586.0" style="-fx-background-color: white;" AnchorPane.leftAnchor="7.0" AnchorPane.rightAnchor="7.0" AnchorPane.topAnchor="55.0" />
+      <HBox layoutX="450.0" layoutY="389.0" spacing="8.0" AnchorPane.bottomAnchor="15.0" AnchorPane.rightAnchor="15.0">
+         <children>
+            <Button layoutX="450.0" layoutY="389.0" mnemonicParsing="false" onAction="#backButtonHandler" prefHeight="34.0" prefWidth="109.0" text="Precedent">
+               <font>
+                  <Font name="Cambria" size="12.0" />
+               </font>
+            </Button>
+            <Button defaultButton="true" layoutX="602.0" layoutY="389.0" mnemonicParsing="false" onAction="#nextStepButtonHandler" prefHeight="34.0" prefWidth="109.0" text="Etape suivante" AnchorPane.bottomAnchor="14.0" AnchorPane.rightAnchor="14.0">
+               <font>
+                  <Font name="Cambria" size="12.0" />
+               </font>
+            </Button>
+         </children>
+      </HBox>
+      <GridPane layoutX="48.0" layoutY="61.0" prefHeight="305.0" prefWidth="617.0" AnchorPane.leftAnchor="80.0" AnchorPane.rightAnchor="35.0" AnchorPane.topAnchor="120.0">
+         <children>
+            <Label text="Promotion concerne : " textFill="WHITE" GridPane.rowIndex="1">
+               <font>
+                  <Font name="Cambria Italic" size="19.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets left="25.0" />
+               </GridPane.margin>
+            </Label>
+            <ChoiceBox fx:id="promotionChoice" prefHeight="32.0" prefWidth="338.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <DatePicker fx:id="dateDebut" prefHeight="32.0" prefWidth="338.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <DatePicker fx:id="dateFin" layoutX="325.0" layoutY="125.0" prefHeight="32.0" prefWidth="338.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <Label layoutX="10.0" layoutY="41.0" text="Date de début : " textFill="WHITE" GridPane.rowIndex="3">
+               <font>
+                  <Font name="Cambria Italic" size="19.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets left="25.0" />
+               </GridPane.margin>
+            </Label>
+            <Label layoutX="10.0" layoutY="126.0" text="Date de fin : " textFill="WHITE" GridPane.rowIndex="4">
+               <font>
+                  <Font name="Cambria Italic" size="19.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets left="25.0" />
+               </GridPane.margin>
+            </Label>
+            <Label prefHeight="23.0" prefWidth="270.0" text="1 . Paramètres du planning : " textFill="WHITE" GridPane.columnSpan="2">
+               <font>
+                  <Font name="Cambria Bold Italic" size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="35.0" layoutY="170.0" text="Semestre :" textFill="WHITE" GridPane.rowIndex="2">
+               <font>
+                  <Font name="Cambria Italic" size="19.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets left="25.0" />
+               </GridPane.margin>
+            </Label>
+            <ChoiceBox fx:id="semestreChoice" layoutX="272.0" layoutY="90.0" prefHeight="32.0" prefWidth="338.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+         </children>
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="310.0" minWidth="10.0" prefWidth="261.0" />
+            <ColumnConstraints hgrow="NEVER" maxWidth="389.0" minWidth="10.0" prefWidth="354.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints maxHeight="73.0" minHeight="10.0" prefHeight="66.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+      </GridPane>
+   </children>
+</AnchorPane>

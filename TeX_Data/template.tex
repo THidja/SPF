@@ -1,0 +1,63 @@
+%% Based on a TeXnicCenter-Template by Tino Weinkauf.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% HEADER
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass[a4paper,10pt]{report}
+
+\usepackage[USenglish]{babel} %francais, polish, spanish, ...
+\usepackage[T1]{fontenc}
+\usepackage[ansinew]{inputenc}
+
+\usepackage{lmodern} %Type1-font for non-english texts and characters
+
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amsfonts}
+\usepackage[top=5cm,left=1cm,right=1cm,bottom=-2cm]{geometry}
+
+
+\begin{document}
+
+\vspace*{-4.5cm}
+\begin{center}
+\scshape Ministère de l'Enseignement Supérieur et de la Recherche Scientifique \\
+\scshape Université Abderrahmane Mira de Béjaïa\\
+\scshape $faculte \\
+\scshape $departement
+
+\end{center}
+
+\vspace*{0.5cm}
+
+
+\begin{center}
+
+\huge Planning des Examens $promotion ($semestre)\\
+\vspace*{0.3cm}
+\normalsize Session $session (Du $debut au $fin)\\
+\end{center}
+\begin{center}
+Nombre de groupes: $nbgroupes
+\end{center}
+
+\centering
+\begin{tabular}{|c|c|c|c|}
+\hline
+Date & Module & Lieu & Surveillants\\
+\hline
+#foreach ($examen in $planning.getListExamen())
+\begin{tabular}{c} $examen.getDayName() \\ $examen.getDateForPlanning() \\ $examen.getHeure() \end{tabular} 
+& 
+\begin{tabular}{c}  $examen.getModule().texFormat() \end{tabular} & 
+\begin{tabular}{c} #foreach($survaillance in $examen.getSurvaillances()) $survaillance.texFormatForGL() \\ #end \end{tabular}
+& 
+\begin{tabular}{c} #foreach($survaillance in $examen.getSurvaillances()) $survaillance.texFormatForS() \\ #end \end{tabular} 
+\\ \hline
+#end 
+\end{tabular}
+
+
+\end{document}
+

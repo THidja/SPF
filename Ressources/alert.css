@@ -1,0 +1,22 @@
+.root  {
+	-fx-background-color : white;
+}
+
+.header-panel {
+	-fx-background-image:url("Images/back.png");
+}
+.header-panel .label {
+	-fx-text-fill:white;
+}
+.content {
+	-fx-padding : 10;
+}
+.button {
+	-fx-base : #2E2E2E;
+	-fx-background-insets : 0;
+	-fx-shadow-highlight-color : transparent;
+}
+.button:focused {
+	-fx-base : #34778d;
+	-fx-text-fill:white;
+}

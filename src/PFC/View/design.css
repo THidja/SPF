@@ -1,0 +1,51 @@
+.myMenu {
+	-fx-background-color:RGBA(255,255,255,0.5);
+}
+.Content {
+	-fx-background-image:url('background.jpg'); 
+}
+.Dialog {
+	-fx-background-color:white;
+}
+.Dialog .header {
+	-fx-background-image:url("back.png");
+}
+.button {
+	-fx-base : #2E2E2E;
+	-fx-focus-traversable:false;
+	-fx-shadow-highlight-color : transparent;
+}
+.choice-box, .date-picker , .text-field
+{
+	-fx-shadow-highlight-color : transparent;
+}
+.table-view {
+	-fx-border-width : 2px;
+	-fx-border-color:rgb(153,153,153);
+}
+.Back {
+	-fx-background-color:RGBA(0,0,0,0.4);
+}
+.lightWeightPane {
+	-fx-background-color:RGBA(0,0,0,0.6);
+}
+.pl .header-label {
+	-fx-background-color:rgb(77,102,204);
+	-fx-background-image:url("back.png");
+	-fx-background-repeat: repeat;
+	-fx-text-fill:rgb(255,255,255);
+	-fx-max-width:1000;
+	-fx-max-height:1000;
+}
+.pl .label  {
+	-fx-alignment: center;
+	-fx-font-size:14;
+	-fx-font-family:"Cambria";
+}
+.list .label{
+	-fx-font-family:"Cambria";
+	-fx-font-size:16px;
+	-fx-padding : 0 0 0 2;
+	-fx-background-color:rgb(77,77,77);
+	-fx-text-fill:white;
+}
