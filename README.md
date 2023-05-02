@@ -1,1 +1,1 @@
-awk -v name="$NAME" -F'"' '/"name":/ {if ($4 ~ "\\y" name "\\y") print $4}'
+PVCs=$(kubectl get pvc --namespace="$NAMESPACE" -o json | python -c "import sys, json, re; pvcs = json.load(sys.stdin)['items']; print('\n'.join([p['metadata']['name'] for p in pvcs if re.search(r'\b$NAME\b', p['metadata']['name'])]))")
